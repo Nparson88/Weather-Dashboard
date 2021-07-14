@@ -164,16 +164,16 @@ function weekElForcast(id) {
                     console.log(data);
                   
                     for (i = 0; i < 5; i++) {
-                        var weekDate = new Date((data.list[((i + 1) * 8) - 1].dt) * 1000).toLocaleDateString();
-                        var weekPicture = data.list[((i + 1) * 8) - 1].weather[0].icon;
-                        var weekPictureURL = "https://openweathermap.org/img/wn/" + weekPicture + ".png";
-                        var weekTemp = data.list[((i + 1) * 8) - 1].main.temp;
-                        var weekHumidity = data.list[((i + 1) * 8) - 1].main.humidity;
+                        var fiveDate = new Date((data.list[((i + 1) * 8) - 1].dt) * 1000).toLocaleDateString();
+                        var fivePicture = data.list[((i + 1) * 8) - 1].weather[0].icon;
+                        var fivePictureURL = "https://openweathermap.org/img/wn/" + fivePicture + ".png";
+                        var fiveTemp = data.list[((i + 1) * 8) - 1].main.temp;
+                        var fiveHumidity = data.list[((i + 1) * 8) - 1].main.humidity;
 
-                        $("#weekDate" + i).html(weekDate);
-                        $("#weekPicture" + i).html("<img src=" + weekPictureURL + ">");
-                        $("#weekTemp" + i).html(weekTemp + "°F");
-                        $("#weekHumidity" + i).html(weekHumidity + "%");
+                        $("#fiveDate" + i).html(fiveDate);
+                        $("#fivePicture" + i).html("<img src=" + fivePictureURL + ">");
+                        $("#fiveTemp" + i).html(fiveTemp + "°F");
+                        $("#fiveHumidity" + i).html(fiveHumidity + "%");
                     }
                 })
         })
